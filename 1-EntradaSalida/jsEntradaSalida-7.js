@@ -50,7 +50,7 @@ function dividir()
     numero2 = document.getElementById("numeroDos").value;
     numero1 = parseInt(numero1);
     numero2 = parseInt(numero2);
-    div = numero1 * numero2;
+    div = numero1 / numero2;
     alert("la división es: "+div);
 }
 

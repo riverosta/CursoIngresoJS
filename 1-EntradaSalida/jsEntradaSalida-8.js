@@ -12,8 +12,8 @@ function SacarResto()
     num2 = document.getElementById("numeroDivisor").value;
     num1 = parseInt(num1);
     num2 = parseInt(num2);
-    div = num1/num2;
-    res = num1%num2; 
+    div = num1 / num2;
+    res = num1 % num2; 
     alert("el resultado es "+div+ " y el resto: "+res); 
 
 
