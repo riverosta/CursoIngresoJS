@@ -4,17 +4,24 @@ function mostrar()
 	var contador=0;
 	var acumulador=0;
 	var num1;
-	acumulador = parseInt(acumulador);
 
+	
 	while(contador<5)
 	{
-		contador = contador +1;	
-	num1 = prompt("ingrese numeros");
-	num1=parseInt(num1);
-	acumulador=mun1+acumulador;
-	
-
+		
+	num1 = prompt("ingrese los numeros");
+	while(isNaN(num1))
+	{
+		alert("error, no ha ingresado un número.");
+		num1 = prompt("ingrese numero");
 	}
+	num1 = parseInt(num1);
+	acumulador= parseInt(acumulador);
+
+	acumulador=num1+acumulador;
+	contador = contador +1;	
+	}
+	
 
 
 
