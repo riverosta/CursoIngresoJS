@@ -1,6 +1,6 @@
 function mostrar()
 {
-        /*Bienvenidos. 
+       /*Bienvenidos. 
     Realizar el algoritmo que permita iterar el ingreso de dos datos,
     una letra y un número entre -100 y 100 (validar) 
     hasta que el usuario quiera e informar al terminar el ingreso por document.write: 
@@ -16,12 +16,14 @@ function mostrar()
     var par=0;
     var impar=0;
     var ceros=0;
-    var promedioPositivo=0;
+    var Positivo=0;
     var sumaNegativa=0;
     var contadorPositivo=0;
     var numeromin;
-    var letramostrar;
+    var letramin;
     var contador=0;
+    var numeromax;
+    var letramax;
 
 
    while(respuesta=="si")
@@ -45,12 +47,12 @@ function mostrar()
 
         if (numero>0)   
             {    
-            promedioPositivo = numero+promedioPositivo;
+            Positivo = numero+Positivo;
             contadorPositivo++;
             }
                 else if(numero<0)
                 {
-                    sumaNegativas=sumaNegativa+numero;
+                    sumaNegativa=sumaNegativa+numero;
                 }
                 else
             {
@@ -68,12 +70,18 @@ function mostrar()
             if (contador==0)
             {
                 numeromin=numero;
-                letramostrar=letra;
+                letramin=letra;
             }
-            else if(numero<numeromin)
+             if(numero<numeromin)
             {
                 numeromin=numero;
-                letramontar=letra;
+                letramin=letra;
+
+            }
+            else
+            {
+               numeromax=numero;
+               letramax=letra;
 
             }
             contador++;
@@ -83,9 +91,11 @@ function mostrar()
 
     
 
-alert("los numeros pares sumados fueron:"+par);     
-alert("la cantidad de numero impares:"+impar);
-alert("la cantidad de numeros cero"+ceros);
-alert("la suma de todos los numeros negativos"+sumaNegativa);
-alert("el promedio es: "+promedioPositivo/contadorPositivo);
+alert("la cantidad de numeros pares fueron: "+par);     
+alert("la cantidad de numero impares: "+impar);
+alert("la cantidad de numeros cero fueron: "+ceros);
+alert("la suma de todos los numeros negativos "+sumaNegativa);
+alert("el promedio es: "+Positivo/contadorPositivo);
+alert("el numero minimos fue: " +numeromin+"y la letra fue: "+letramin);
+alert("el numero maximo fue: "  +numeromax+" y la letra fue: "+letramax);
 }
