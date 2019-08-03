@@ -19,6 +19,9 @@ function mostrar()
     var promedioPositivo=0;
     var sumaNegativa=0;
     var contadorPositivo=0;
+    var numeromin;
+    var letramostrar;
+    var contador=0;
 
 
    while(respuesta=="si")
@@ -62,8 +65,18 @@ function mostrar()
                 {
                     impar++;
                 }
-            
+            if (contador==0)
+            {
+                numeromin=numero;
+                letramostrar=letra;
+            }
+            else if(numero<numeromin)
+            {
+                numeromin=numero;
+                letramontar=letra;
 
+            }
+            contador++;
 
         respuesta=prompt("¿quiere seguir ingresando?");
     }
