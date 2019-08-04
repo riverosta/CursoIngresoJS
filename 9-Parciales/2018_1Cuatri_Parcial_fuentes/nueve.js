@@ -12,15 +12,18 @@ f) El peso máximo y el mínimo. */
 var marca;
 var peso;
 var temperatura;
-var respuesta="si";
 var contador=0;
 var par=0;
 var primeraMarca=0;
 var masPesado=0;
 var otraMarca;
 var menosPesado;
+var contadorProducto=0;
+var pesoTotal=0;
+var contadorTemperatura=0;
+var respuesta;
 
-while (respuesta =="si")
+do
 {
     marca=prompt("ingrese marca");
     while(!isNaN(marca) || marca=="pepito")
@@ -36,6 +39,7 @@ while (respuesta =="si")
         peso=prompt("peso incorrecto, vuelva a ingresar")
         peso=parseInt(peso);
     }
+    pesoTotal=peso+pesoTotal;
 
     temperatura=prompt("ingrese temperatura");
     temperatura=parseInt(temperatura);
@@ -64,7 +68,10 @@ while (respuesta =="si")
         menosPesado=peso;
         otraMarca = marca
     }
-
+    if (temperatura<0)
+    {
+        contadorTemperatura++;
+    }
 
 
 
@@ -73,11 +80,13 @@ while (respuesta =="si")
 
 
     contador++;
-    respuesta=prompt("¿desea seguir ingresando?")
-}
+    respuesta=confirm("desea seguir ingresando?");
+}while(respuesta);
+
 
 document.write("las temperaturas par ingresados fueron:"+par+"<br>");
-document.write("el mas pesado fue " +masPesado+ " y la marca "+primeraMarca+"<br>");
-document.write("el menos pesado " +menosPesado+ " y la marca " +otraMarca+"<br>");
-
+document.write("la marca más pesado: "+primeraMarca+"<br>");
+document.write("el peso mínimo fue " +menosPesado+ " y la marca " +otraMarca+ " y el maximo fue " +masPesado+" y la marca "+primeraMarca+ " <br>");
+document.write("la cantidad de temperatura que se conserva a menos de 0 grados es: "+contadorTemperatura+"<br>");
+document.write("el promedio del peso total de los podrucctos ingresasos fueron :"+(pesoTotal/contador)+"<br>");
 }
