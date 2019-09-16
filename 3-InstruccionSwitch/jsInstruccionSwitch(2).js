@@ -1,52 +1,41 @@
 function mostrar()
 {
-/*al seleccionar un mes informar. 
-si estamos en Invierno: "Abrigate que hace frio." 
-si aún no llego el Invierno: "Falta para el invierno." 
-si ya paso el Invierno: "Ya pasamos el frio, ahora calor!!!." 
-ACLARAcIÓN: tomamos a Julio y Agosto como los meses de Invierno.*/
+/*al seleccionar un mes informar.
+si estamos en Invierno: "Abrigate que hace frio."
+si aún no llego el Invierno: "Falta para el invierno."
+si ya paso el Invierno: "Ya pasamos el frio, ahora calor!!!."
+ACLARAcIÓN: tomamos a Julio y Agosto como los meses de Invierno. */
 var mesDelAño = document.getElementById('mes').value;
+var respuesta;
 
 switch(mesDelAño)
 {
-   
-    case "julio":
-         {
-         alert("abrigate que hace frio");
-        break;
-         }
+    case "Julio":
     case "Agosto":
         {
-         alert("abrigate que hace frio");
-        break;
-        }
-    case "Septiembre":
-        {
-         alert("hace calor");
-        break; 
-        } 
-    case "Octubre":
-        {
-        alert("hace calor");
-        break;
-        } 
-    case "Noviembre":
-        {
-        alert("hace calor");
+        respuesta = "Abrigate que hace frio";
         break;    
-        }  
-    case "Diciembre":
-        {
-         alert("hace calor");
-         break;   
-        }
-    default:
-        {
-            alert("falta mucho para el invierno");
-            break;
         }    
+    case "Septiempber":
+    case "Octubre":
+    case "Noviembre":
+    case "diciembre":
+        {
+            respuesta = "ya pasamos el frio ahora hace calor!!";
+            break;
+        }            
+    default:
+    {
+        respuesta="Falta para el invierno";
+        break;
+    }    
+}
+alert(respuesta);
 
 
-    }
-                          
+
+
+
+
+
 }//FIN DE LA FUNCIÓN
