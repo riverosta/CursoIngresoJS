@@ -1,25 +1,20 @@
 function mostrar()
-{
+{//Al presionar el botón pedir números hasta que el USUARIO QUIERA e informar la suma acumulada y el promedio.
 
 	var contador=0;
 	var acumulador=0;
-	var respuesta='SI';
+	var respuesta='si';
 	var numero;
-	while(respuesta=="SI")
-	{
-	numero=prompt("ingresar numeros");
-	while(isNaN(numero))
-	{
-		alert(numero+" no es un numero");
-		numero=prompt("ingrese un numero");
-	}
-	numero=parseInt(numero);
 
-	acumulador=numero+acumulador;
-	acumulador=parseInt(acumulador);
-	contador++;
-	respuesta = prompt("si quiere seguir ingresando N°s escriba SI, sino pulse cualquier tecla");
+	while(respuesta=="si")
+	{
+		numero = prompt("ingrese numeros");
+		numero=parseInt(numero);
+		acumulador = numero+acumulador
 
+
+		contador++;
+		respuesta = prompt("¿seguir ingresando?");
 	}
 
 
